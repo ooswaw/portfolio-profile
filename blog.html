@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Photo Gallery</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="gallery-container">
+        <h1 class="gallery-title">Digital Diary</h1>
+        <div class="gallery-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="images/pic1.jpeg">
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="images/pic2.jpeg">
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="images/pic3.jpeg">
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="images/pic4.jpeg">
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="images/pic5.jpeg">
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="images/pic6.jpeg">
+            </div>
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="images/pic7.jpeg">
+            </div>
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="images/pic12.jpeg">
+            </div>
+            <!-- Card 9 -->
+            <div class="card">
+                <img src="images/pic11.jpeg">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the navigation menu in mobile view
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

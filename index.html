@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <header>
+                <div class="logo-container">
+                    <img src="images/oswa.jpeg" alt="Logo" class="logo-img">
+                    <span class="brand-name">Uswa Masood</span>
+                </div>
+                
+                
+                <nav>
+                    <div class="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    
+                </nav>
+            </header>
+            <div class="content">
+                <div class="profile-pic">
+                    <img src="images/oswa.jpeg" alt="profile pic">
+                </div>
+                <div class="intro">
+                    <h5>Hello, I'm <span class="role">Frontend Developer</span></h5>
+                    <h1>Uswa Masood</h1>
+                    <p>
+                        I'm a first-semester IT student at Air University Islamabad (Roll No. 241151), 
+                        passionate about both technology and creativity.
+                    </p>
+                    <p>
+                        In my free time, I enjoy baking, reading, photography, and modeling, 
+                        each offering a unique way for me to express myself and explore new interests.
+                    </p>
+                    
+                    <div class="actions">
+                        <a href="cv.html" class="btn primary">Download CV</a>
+
+
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    
+    <script>
+        const textElements = document.querySelectorAll('.text-container'); 
+        let currentIndex = 0;
+    
+        function cycleTexts() {
+          textElements.forEach((element, index) => {
+            element.style.display = index === currentIndex ? 'block' : 'none';
+          });
+    
+         
+    
+          
+        }
+    
+        cycleTexts(); 
+      </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+/* Basic styling for navigation bar */
+nav {
+    background-color: #333;
+    padding: 10px;
+    position: fixed; /* changed to fixed */
+    top: 0;
+    width: 100%; /* ensure full width */
+    z-index: 1000;
+}
+
+nav .menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    margin: 0 15px;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+
+nav .menu li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.active .menu {
+        display: flex;
+    }
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Gallery Container */
+.gallery-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout for Cards */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* Increased spacing for larger cards */
+    justify-items: center;
+}
+
+.card {
+    position: relative;
+    width: 320px; /* Increased width */
+    height: 400px; /* Increased height */
+    background: #fff; /* Polaroid white background */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Polaroid Image Style */
+.card img {
+    width: 90%; /* Adjusted to leave space for the border */
+    height: auto;
+    max-height: 80%; /* Ensures it doesn't exceed the card's height */
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .card {
+        width: 280px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .card {
+        width: 240px;
+        height: 300px;
+    }
+}

@@ -1,0 +1,127 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0; /* Light text color */
+}
+/* Navigation styles */
+nav {
+    background-color: #1e1e1e; /* Dark background for the nav */
+    padding: 15px; /* Padding around the nav */
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    cursor: pointer; /* Pointer cursor for the toggle */
+}
+
+.menu-toggle span {
+    display: block; /* Make spans block elements */
+    height: 3px; /* Height of the toggle lines */
+    width: 25px; /* Width of the toggle lines */
+    background: #4CAF50; /* Green color for the toggle */
+    margin: 4px 0; /* Space between lines */
+}
+
+.menu {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Horizontal menu */
+    justify-content: flex-end; /* Align to the right */
+}
+
+.menu li {
+    margin-left: 20px; /* Space between menu items */
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: #e0e0e0; /* Light text color */
+    font-weight: bold; /* Bold text */
+}
+
+.menu a:hover {
+    color: #4CAF50; /* Change color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Positioning for dropdown */
+        top: 60px; /* Position below the nav */
+        right: 0; /* Align to the right */
+        background-color: #1e1e1e; /* Dark background for dropdown */
+        width: 100%; /* Full width */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show toggle button on mobile */
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when active */
+    }
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1e1e1e; /* Darker container background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Green color for header */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bbb; /* Lighter gray for labels */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #2a2a2a; /* Dark background for inputs */
+    color: #e0e0e0; /* Light text color for inputs */
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.response-message {
+    margin-top: 20px;
+    text-align: center;
+    color: #4CAF50; /* Green color for response message */
+}
